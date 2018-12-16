@@ -1,11 +1,11 @@
 <div class="w3-container w3-padding-16">
-  Select Company
+  <p>Select Company
   <select id="companies">
     <option *ngFor="let company of companies" value="company.CompanyKey" (change)="setCompanyKey(company)">
       {{company.Name}}
     </option>
-  </select>
-  <input type="button" (click)="getContacts()" value="Get Contacts">
+  </select></p>
+  <input type="button" class="w3-button w3-blue" (click)="getContacts()" value="Get Contacts">
 </div>
 
 <div class="w3-container" id="contactList">
@@ -17,7 +17,7 @@
       <span (click)="deleteContact(contact)" class="w3-button glyphicon glyphicon-erase" style="float:right; padding-top: 0px;"></span>
     </li>
   </ul>
-  <button (click)="ToggleModal()" class="w3-button w3-grey w3-margin-top">Add contact</button>
+  <button (click)="ToggleModal()" class="w3-button w3-blue w3-margin-top">Add contact</button>
 </div>
 <!-- Trigger/Open the Modal -->
 
@@ -34,7 +34,7 @@
       <div class="w3-section">
         <label><b>Name</b></label>
         <input class="w3-input w3-border w3-margin-bottom" type="text" name="Name" required [(ngModel)]="newContact.Info.Name">
-        <button class="w3-button w3-block w3-left-align w3-gray" (click)="showPhone = !showPhone;"><b>Phone</b></button>
+        <button class="w3-button w3-block w3-left-align w3-blue w3-border" (click)="showPhone = !showPhone;"><b>Phone</b></button>
         <div class="w3-section" *ngIf="showPhone">
           <label><b>Number</b></label>
           <input class="w3-input w3-border" type="text" name="PhoneNumber" required [(ngModel)]="newContact.Info.DefaultPhone.Number">
@@ -45,7 +45,7 @@
           <label><b>Country code</b></label>
           <input class="w3-input w3-border" type="text" name="Country Code" required [(ngModel)]="newContact.Info.DefaultPhone.CountryCode">
         </div>
-        <button class="w3-button w3-block w3-left-align w3-gray" (click)="showEmail = !showEmail;"><b>Email</b></button>
+        <button class="w3-button w3-block w3-left-align w3-blue w3-border" (click)="showEmail = !showEmail;"><b>Email</b></button>
         <div class="w3-section" *ngIf="showEmail">
           <label><b>Email address</b></label>
           <input class="w3-input w3-border" type="text" name="Email Address" required [(ngModel)]="newContact.Info.DefaultEmail.EmailAddress">
@@ -54,7 +54,7 @@
           <label><b>Description</b></label>
           <input class="w3-input w3-border" type="text" name="Description" required [(ngModel)]="newContact.Info.DefaultEmail.Description">
         </div>
-        <button class="w3-button w3-block w3-left-align w3-gray" (click)="showAddress = !showAddress;"><b>Address</b></button>
+        <button class="w3-button w3-block w3-left-align w3-blue w3-border" (click)="showAddress = !showAddress;"><b>Address</b></button>
         <div class="w3-section" *ngIf="showAddress">
           <label><b>Addressline 1</b></label>
           <input class="w3-input w3-border" type="text" name="Adressline 1" required [(ngModel)]="newContact.Info.InvoiceAddress.AddressLine1">
