@@ -23,8 +23,8 @@
                     </a>
                 </li>
                 <li *ngIf="authenticatorService.authenticated()" [routerLinkActive]='["link-active"]'>
-                    <a [routerLink]='["/secret"]' (click)='collapse()'>
-                        <span class='glyphicon glyphicon-th-list'></span> Secret
+                    <a [routerLink]='["/contact"]' (click)='collapse()'>
+                        <span class='glyphicon glyphicon-th-list'></span> Contacts
                     </a>
                 </li>
                 <li *ngIf="authenticatorService.authenticated()" [routerLinkActive]='["link-active"]'>

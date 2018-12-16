@@ -8,15 +8,18 @@ import { Contact } from '../_models/contact';
 import { ContactService } from '../_services/contact.service';
 
 @Component({
-  selector: 'app-secret',
-  templateUrl: './secret.component.html',
-  styleUrls: ['./secret.component.css']
+  selector: 'app-contact',
+  templateUrl: './contact.component.html',
+  styleUrls: ['./contact.component.css']
 })
-export class SecretComponent implements OnInit {
+export class ContactComponent implements OnInit {
   public companies: Company[];
   public contacts: Contact[];
   public newContact: Contact;
   public contactModalShow = false;
+  public showAddress = false;
+  public showPhone = false;
+  public showEmail = false;
   constructor(private http: HttpClient, private contactService: ContactService) { 
   }
 

@@ -27,7 +27,7 @@ export class ContactService {
   }
   delete(id: number): Observable<Contact> {
     let expandedUrl = this.apiUrl+'/'+id;
-    return this.http.delete<Contact>(expandedUrl).pipe(map(result => result as Contact));;
+    return this.http.delete(expandedUrl).pipe(map(result => result as Contact));;
   }
   update(id: number, contact: Contact): Observable<Contact> {
     let expandedUrl = this.apiUrl+'/'+id;

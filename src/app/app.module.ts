@@ -11,7 +11,7 @@ import { AuthenticatorService } from './_services/authenticator.service';
 import { AuthGuard } from './_guards/auth-guard.service';
 import { ContactService } from './_services/contact.service';
 import { JwtInterceptor } from './_helpers/jwt.interceptor';
-import { SecretComponent } from './secret/secret.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +19,7 @@ import { SecretComponent } from './secret/secret.component';
     NavMenuComponent,
     HomeComponent,
     LoginComponent,
-    SecretComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -27,7 +27,7 @@ import { SecretComponent } from './secret/secret.component';
     FormsModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent, pathMatch: 'full' },
-      { path: 'secret', component: SecretComponent, canActivate: [AuthGuard] },
+      { path: 'contact', component: ContactComponent, canActivate: [AuthGuard] },
       { path: 'login', component: LoginComponent },
     ])
   ],

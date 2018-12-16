@@ -9,10 +9,8 @@ export class JwtInterceptor implements HttpInterceptor {
         let accesstoken = JSON.parse(localStorage.getItem('accesstoken'));
         let companyKey = "";
         if(localStorage.getItem('CompanyKey')){
-            //console.log(localStorage.getItem('CompanyKey'));
             companyKey = JSON.parse(localStorage.getItem('CompanyKey'));
         }
-        //console.log(accesstoken.access_token);
         if (accesstoken) {
             request = request.clone({
                 setHeaders: {
